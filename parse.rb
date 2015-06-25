@@ -5,7 +5,7 @@ pipe = IO.popen("apcaccess")
 upsdata_h = {}
 data = []
 
-while true 
+loop do 
 
   pipe = IO.popen("apcaccess")
   upsdata_h[:ups] = {}
@@ -21,7 +21,7 @@ while true
   File.open("upsdata.json", "w") do |f|
     f.write(upsdata_h.to_json)
   end
-
+  
   sleep 5 
 
 end
