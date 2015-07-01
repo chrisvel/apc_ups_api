@@ -1,0 +1,10 @@
+[Unit]
+Description=Ups data parser
+
+[Service]
+Type=forking
+Environment=statedir=/var/cache/ups_dataparser
+ExecStart=/home/hyp3rkyd/.rbenv/shims/ruby /home/hyp3rkyd/apc_ups_parse/parse.rb start quiet
+
+[Install]
+WantedBy=multi-user.target
