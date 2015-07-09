@@ -1,0 +1,55 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+  <head>
+    <script src="http://code.jquery.com/jquery-2.1.4.min.js" type="text/javascript"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.10.3/moment.min.js" type="text/javascript"></script>
+    <script src="semantic-ui/semantic.min.js" type="text/javascript"></script>
+    <script src="js/news.js" type="text/javascript"></script>
+    <script src="js/ups.js" type="text/javascript"></script>
+    <script src="js/raphael.2.1.0.min.js" type="text/javascript"></script>
+    <script src="js/justgage.1.0.1.min.js" type="text/javascript"></script>
+    <link rel="stylesheet" href="semantic-ui/semantic.min.css" type="text/css" />
+  </head>
+  <body>
+    
+    <br />
+    <br />
+    <div class="ui page grid">
+      <div class="sixteen wide column">
+        <div class="ui grid segment">
+          <div class="two wide column">
+            <div id="g1" style="width:100px; height:80px"></div>
+          </div>
+          <div class="two wide column">
+            <div id="g2" style="width:100px; height:80px"></div>
+          </div>
+          <div class="two wide column">
+            <div id="g3" style="width:100px; height:80px"></div>
+          </div>
+          <div class="two wide column">
+            <div id="g4" style="width:100px; height:80px"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="ui page grid">
+      <div class="sixteen wide column">
+        <table class="ui table small blue segment">
+          <thead>
+            <tr>
+              <th>newsfeed</th>
+              <th>id</th>
+              <th>pubDate</th>
+              <th>title</th>
+            </tr>
+          </thead>
+          <tbody id="news">
+
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+  </body>
+</html>

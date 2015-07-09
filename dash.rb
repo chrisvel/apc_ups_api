@@ -1,4 +1,3 @@
-require 'sinatra'
 require 'open-uri'
 require 'json'
 require 'rss'
@@ -8,21 +7,7 @@ require_relative 'lib/news/news'
 require_relative 'lib/ups/ups'
 require 'unirest'
 
-set :bind, '0.0.0.0'
-
-get '/api/upsdata' do
-  content_type :json
-  File.read('upsdata.json')
-end
-
-get '/api/newsdata' do
-  content_type :json
-  File.read('news_data.json')
-end
-
-get '/index' do
-  erb :index
-end
+#set :bind, '0.0.0.0'
 
 def tocelsius(degrees)
   celsius = (degrees - 32) / 1.8
@@ -33,7 +18,7 @@ end
 # Initialize Weather object for Athens, Gr
 Athens = Weather.new('37.968308', '23.732417')
 Karditsa = Weather.new('39.365904', '21.922546')
-Home_UPS = Ups.new('upsdata.json')
+Home_UPS = Ups.new('http://hyp3rkyd.no-ip.org:4567/api/upsdata')
 
 # Initialize objects for news sites
 Huffington = News.new(
@@ -57,7 +42,7 @@ Protothema = News.new(
   Config::News::PROTOTHEMA[:lang]
   )
 
-#while true do
+while true do
   #Thread.new do
     @news = {}
     @temp = {}
@@ -103,11 +88,12 @@ Protothema = News.new(
     puts "Ups data exported to JSON [OK]" 
       
     #sleep 600
-    #(1..60).each do |s|
-    #  print "#"
-    #  sleep 1
-    #end
-      
+    (1..60).each do |s|
+      print "#"
+      sleep 1
+    end
+  puts
+    
   #end
-#end
+end
 

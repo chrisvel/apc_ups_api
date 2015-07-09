@@ -20,7 +20,7 @@ loop do
 
   puts "Internal temperature: #{upsdata_h[:ups]['ITEMP']}"
 
-  File.open("/home/hyp3rkyd/apc_ups_parse/upsdata.json", "w") do |f|
+  File.open("upsdata.json", "w") do |f|
     f.write(upsdata_h.to_json)
   end
   
