@@ -1,6 +1,6 @@
 function updateUpsTable(g1, g2, g3, g4) {
   $.getJSON("api/upsdata", function(upsdata){
-      console.log(upsdata.ups.LINEV);
+      //console.log(upsdata.ups.LINEV);
       g1.refresh(upsdata.ups.LINEV);
       g2.refresh(upsdata.ups.ITEMP);
       g3.refresh(upsdata.ups.BCHARGE);
@@ -9,7 +9,7 @@ function updateUpsTable(g1, g2, g3, g4) {
 }
 
 $(document).ready(function () {
-  console.log("ready!");
+  //console.log("ready!");
   var g1, g2, g3, g4;
   
   g1 = new JustGage({
