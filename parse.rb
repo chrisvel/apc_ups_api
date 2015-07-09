@@ -39,22 +39,22 @@ loop do
   Home_UPS = Ups.new('upsdata.json')
 
   # Initialize objects for news sites
-  Huffington = News.new(
+  Huffington ||= News.new(
     Config::News::HUFFINGTON[:title], 
     Config::News::HUFFINGTON[:url],
     Config::News::HUFFINGTON[:lang]
     )
-  CNN_World = News.new(
+  CNN_World ||= News.new(
     Config::News::CNN_WORLD[:title],
     Config::News::CNN_WORLD[:url],
     Config::News::CNN_WORLD[:lang]
     )
-  NYTimes_World = News.new(
+  NYTimes_World ||= News.new(
     Config::News::NYTIMES_WORLD[:title],
     Config::News::NYTIMES_WORLD[:url],
     Config::News::NYTIMES_WORLD[:lang]
     )
-  Protothema = News.new(
+  Protothema ||= News.new(
     Config::News::PROTOTHEMA[:title],
     Config::News::PROTOTHEMA[:url],
     Config::News::PROTOTHEMA[:lang]
