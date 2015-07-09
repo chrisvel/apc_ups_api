@@ -3,7 +3,7 @@ function updateNewsTable() {
   
   // load news.js file data
   $.getJSON("api/newsdata", function(data){
-    console.log(data);
+    //console.log(data);
     $.each(data, function(newsfeed, val){
       
       for(var i=0; i<val.length; i++)
