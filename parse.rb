@@ -34,9 +34,9 @@ loop do
   end
 
   # Initialize Weather object for Athens, Gr
-  Athens = Weather.new('37.968308', '23.732417')
-  Karditsa = Weather.new('39.365904', '21.922546')
-  Home_UPS = Ups.new('upsdata.json')
+  Athens ||= Weather.new('37.968308', '23.732417')
+  Karditsa ||= Weather.new('39.365904', '21.922546')
+  Home_UPS ||= Ups.new('upsdata.json')
 
   # Initialize objects for news sites
   Huffington ||= News.new(
