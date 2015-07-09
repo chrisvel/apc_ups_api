@@ -2,7 +2,7 @@
 Description=Ups sinatra web server
 
 [Service]
-Type=forking
+Type=simple
 Environment=statedir=/var/cache/ups_webserver
 ExecStart=/home/hyp3rkyd/.rbenv/shims/ruby /home/hyp3rkyd/apc_ups_parse/ups_ws.rb start quiet
 
