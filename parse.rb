@@ -1,4 +1,7 @@
+require 'open-uri'
 require 'json'
+require 'rss'
+require 'unirest'
 require_relative 'config'
 require_relative 'lib/weather/weather'
 require_relative 'lib/news/news'
