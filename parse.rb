@@ -1,4 +1,8 @@
 require 'json'
+require_relative 'config'
+require_relative 'lib/weather/weather'
+require_relative 'lib/news/news'
+require_relative 'lib/ups/ups'
 
 upsdata_h = {}
 data = []
