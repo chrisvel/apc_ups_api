@@ -28,5 +28,7 @@ loop do
 
 end
 
+pipe.close
+
 
 
